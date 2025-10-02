@@ -287,25 +287,27 @@
 
 
 /*__________________________________________________________*/
+//Остаточные параметры
 
-const logUser = (user) => {
-    const {name, age, city, ... otherInfo} = user
 
-    console.log(`
-        Имя: ${name}
-        Возраст: ${age}
-        Город: ${city}
-        `)
-        console.log(otherInfo)
-}
+// const logUser = (user) => {
+//     const {name, age, city, ... otherInfo} = user
 
-logUser({
-    name: 'Макс',
-    age: 27,
-    city: 'Дзержинск',
-    company: 'Avito',
-    jobPost: 'Tech-Support',
-})
+//     console.log(`
+//         Имя: ${name}
+//         Возраст: ${age}
+//         Город: ${city}
+//         `)
+//         console.log(otherInfo)
+// }
+
+// logUser({
+//     name: 'Макс',
+//     age: 27,
+//     city: 'Дзержинск',
+//     company: 'Avito',
+//     jobPost: 'Tech-Support',
+// })
 
 
 /*__________________________________________________________*/
