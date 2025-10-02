@@ -147,6 +147,6 @@ function getSecretMessage(name) {
     return `О, а я тебя знаю! Ты же тот самый ${name}?`
 }
 
-console.log(getSecretMessage())
+console.log(getSecretMessage('Макс'))
 
 /*______________________________________________________*/
