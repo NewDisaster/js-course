@@ -57,13 +57,13 @@
 // console.log(Math.trunc(3.49))    //Округление вниз до целого
 /*___________________________________________________________*/
 
-const numberAsString = '100px'
+// const numberAsString = '100px'
 
-console.log(parseInt(numberAsString))
+// console.log(parseInt(numberAsString))//парсим только целые
 
-const numberAsString2 = '100.05px'
+// const numberAsString2 = '100.05px'
 
-console.log(parseFloat(numberAsString2))
+// console.log(parseFloat(numberAsString2))//парсим дробные
 
 
 /*___________________________________________________________*/
