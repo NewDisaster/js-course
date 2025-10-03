@@ -119,27 +119,27 @@
 /*________________________________________________*/
 
 
-let counter = {
-    count: 0,
-    inc(n = 1) {
-        this.count += n
-        return this
-    },
-    dec(n = 1) {
-        this.count -= n
-        return this
-    },
-    reset() {
-        this.count = 0
-        return this
-    },
-    show() {
-        console.log('Текущее значение:', this.count)
-        return this
-    },
-}
+// let counter = {
+//     count: 0,
+//     inc(n = 1) {
+//         this.count += n
+//         return this
+//     },
+//     dec(n = 1) {
+//         this.count -= n
+//         return this
+//     },
+//     reset() {
+//         this.count = 0
+//         return this
+//     },
+//     show() {
+//         console.log('Текущее значение:', this.count)
+//         return this
+//     },
+// }
 
-counter.inc().inc(5).dec(2).show().reset().show()
+// counter.inc().inc(5).dec(2).show().reset().show()
 
 
 /*________________________________________________*/
