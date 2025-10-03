@@ -95,22 +95,22 @@
 // console.log(calculator.mul())
 /*________________________________________________*/
 
-let ladder = {
-    step: 0,
-    up() {
-        this.step++;
-        return this
-    },
-    down() {
-        this.step--;
-        return this
-    },
-    showStep: function() {
-        console.log('Текущая ступенька',this.step );
-        return this 
-    }
-}
-ladder.up().up().down().showStep().down().showStep(); 
+// let ladder = {
+//     step: 0,
+//     up() {
+//         this.step++;
+//         return this
+//     },
+//     down() {
+//         this.step--;
+//         return this
+//     },
+//     showStep: function() {
+//         console.log('Текущая ступенька',this.step );
+//         return this 
+//     }
+// }
+// ladder.up().up().down().showStep().down().showStep(); 
 
  
 
@@ -118,6 +118,28 @@ ladder.up().up().down().showStep().down().showStep();
 
 /*________________________________________________*/
 
+
+let counter = {
+    count: 0,
+    inc(n = 1) {
+        this.count += n
+        return this
+    },
+    dec(n = 1) {
+        this.count -= n
+        return this
+    },
+    reset() {
+        this.count = 0
+        return this
+    },
+    show() {
+        console.log('Текущее значение:', this.count)
+        return this
+    },
+}
+
+counter.inc().inc(5).dec(2).show().reset().show()
 
 
 /*________________________________________________*/
