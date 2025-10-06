@@ -1,187 +1,94 @@
 /*__________________________________________________________ */
-//Методы массивов JavaScript — forEach, map, filter, reduce, some, every, sort, includes, indexOf.
+//Перебор объекта в JavaScript. Коллекции Map и Set.
 
 
 
 
 
-
-/*__________________________________________________________ */
-
-// const data = ['Макс', 27]
-
-// const [name, age] = data //Деструктуризация
-// console.log('name:', name)
-// console.log('age', age)
-// /*__________________________________________________________ */
-
-// const letters = [1, 2, 4, 5 , 4]
-
-// letters.forEach((element, index, array) => {
-//   console.log(element)
-// }) // Вывод элементов массива
-
-// console.log(letters.indexOf(4)) // Выводим индекс элемента (при повторах - первый индекс)
-//console.log(letters.indexOf(4, 3))// Второй аргумент - с какого индекса смотрим
-
-// const users = [
-//   {
-//     name: 'Макс',
-//     age: 27,
-//   },
-//   {
-//     name: 'Саня',
-//     age: 27,
-//   },
-//   {
-//     name: 'Владислав',
-//     age: 400,
-//   },
-// ]
-
-// console.log(users.findIndex( (user) => user.name === 'Владислав'))
-
-
-
-
-/*____________________________________
-
-______________________ */
 
 
 /*__________________________________________________________ */
 
-//const letters = [1, 2, 4, 5 , 4]
+// const user = {
+//   name: 'Макс',
+//   age: 27,
+//   city: 'Дзержинска'
+// }
 
-//console.log(letters.includes(2)) //Проверка, есть ли элемент в массиве
+// const userKeys = Object.keys(user) // Хранит массив ключей
+// console.log(userKeys)
 
-// const users = [
-//   {
-//     name: 'Макс',
-//     age: 27,
-//     city: 'Москва', 
-//   },
-//   {
-//     name: 'Саня',
-//     age: 27,
-//     city: 'Нижний Новгород',
-//   },
-//   {
-//     name: 'Владислав',
-//     age: 400,
-//     city: 'Санкт-Петербург',
-//   },
-//    {
-//     name: 'Владислав',
-//     age: 25,
-//     city: 'Москва',
-//   },
-// ]
+// const userValues = Object.values(user) // Хранит массив значений
+// console.log(userValues)
 
-// console.log(
-//   users.some((user) => user.name === 'Владислав') //проверка, если структура сложная
-// )
-
-// console.log(
-//   users.every((user) => user.age >= 18) //Проверка, все ли Age в массиве >= 18
-// )
-
-// console.log(
-//   users.find((user) => user.name === 'Владислав') //Найдет первого 
-// )
-
-// console.log(
-//   users.filter((user) => user.name === 'Владислав') //Найдет всех 
-// )
-
-// const filterUsers = users.filter((user) =>{
-//   return user.city === 'Москва' || user.age < 45
+// userValues.forEach((value) => {
+//   console.log('Значение:', value)
 // })
 
-// console.log(filterUsers)
-
-// const usersFormatted = users.map((user) =>{
-//   return `${user.name}, ${user.age} лет, живет в г. ${user.city}`
-// })
-
-// console.log(usersFormatted)
-
+// let userEntries = Object.entries(user)
+// console.log(userEntries) // Преобраззует в массив массивов
+//const userFormatted = Object.fromEntries(userEntries) //Преобразует в объект массив массивов
+ 
 
 /*__________________________________________________________ */
 
-// const users = [
-//   {
-//     name: 'Макс',
-//     age: 27,
-//     city: 'Москва', 
-//   },
-//   {
-//     name: 'Саня',
-//     age: 27,
-//     city: 'Нижний Новгород',
-//   },
-//   {
-//     name: 'Владислав',
-//     age: 400,
-//     city: 'Санкт-Петербург',
-//   },
-//    {
-//     name: 'Владислав',
-//     age: 25,
-//     city: 'Москва',
-//   },
-// ]
+// const data = new Map([
+//  [1, 'Один как число'],
+//  ['1', 'Один как строка'],
+// ])//Создать коллекцию
 
-// const ageSum = users.reduce((sumAge, user, index, array) => {  //sumAge = Текущее значение функции
-//   return sumAge + user.age
-// }, 0) //0 - начальное значение
+// const data = new Map()
 
-// console.log('Средний возраст пользователей:', ageSum /users.length )
+// data.set(1, 'Один как число')//Добавить элемент в коллекцию
+// data.set('1', 'Один как строка')
+
+// console.log('data:', data)
 /*__________________________________________________________ */
+
+// const data = new Map()
+
+// data.set(1, 'Один как число')
+// data.set('1', 'Один как строка')
+
+// console.log(data.get(1)) //Выводим значение по ключу
+// console.log(data.get('1'))
+
+/*__________________________________________________________ */
+// const data = new Map()
+
+// data.set('name', 'Макс')
+// data.delete('name')//Удаляет ключ+значение по ключу
+//data.clear()//Полностью очищает коллекцию
+//data.size - количество пар ключ/значение в коллекции
+// console.log(data.has('name'))// Поиск, есть ли значение по ключу (ищем ключ)
 
 
 
 /*__________________________________________________________ */
 
-// array.reduce((accumulator, currentValue, index, array) => {
-//   // тело функции
-// }, initialValue)
-// Параметр	Что это
-// accumulator	накопленное значение (то, что «собираем»)
-// currentValue	текущий элемент массива
-// index	индекс текущего элемента (необязательно)
-// array	сам массив (необязательно)
-// initialValue	начальное значение аккумулятора (рекомендуется всегда указывать)
+// const set = new Set([1, 2, 2, 2, 3]) //коллекция без повторов и ключей
+
+// console.log(set) //Set(3) {1, 2, 3}
+// // Работа с set аналогична работе с map 
+/*__________________________________________________________ */
+
+
 
 /*__________________________________________________________ */
 
-// const numbers = [1, 2, 3, 4]
 
-// const sum = numbers.reduce((acc, num) => {
-//   return acc + num
-// }, 0)
-
-// console.log(sum) // 10
-
-//
 
 /*__________________________________________________________ */
 
-// const numbers = [1, 2, 3, 4, 5]
-// numbers.reverse()
 
-// console.log(numbers) // [5, 4, 3, 2, 1]. !!!Меняет исходную переменную.
 
 /*__________________________________________________________ */
 
-// const numbers = [2, 10, 4, 30]
-// numbers.sort()
-// console.log(numbers) // [10, 2, 30, 4] ❌ — не по числам!по строкам
 
 
-// const numbers = [2, 10, 4, 30]
-// numbers.sort((a, b) => a - b)
-// console.log(numbers) // [2, 4, 10, 30]
+/*__________________________________________________________ */
+
+
 
 /*__________________________________________________________ */
 
