@@ -137,39 +137,39 @@
 // exampleDeveloper.eat()
 /*__________________________________________________________ */
 
-class Person {
-  constructor(name, age) {
-    this.name = name
-    this.age = age
-  }
+// class Person {
+//   constructor(name, age) {
+//     this.name = name
+//     this.age = age
+//   }
 
-  eat() { console.log('Ем...')}
-  sleep() {console.log('Сплю...')}
+//   eat() { console.log('Ем...')}
+//   sleep() {console.log('Сплю...')}
 
-}
+// }
 
-const examplePerson = new Person('Василий', 30)
-//examplePerson.eat()
-//examplePerson.sleep()
+// const examplePerson = new Person('Василий', 30)
+// //examplePerson.eat()
+// //examplePerson.sleep()
 
-class Developer extends Person {
-  constructor(name, age, experience) {
-    super(name, age)
-    this.experience = experience
-  }
-  writeCode() {console.log('Пишу код')}
+// class Developer extends Person {
+//   constructor(name, age, experience) {
+//     super(name, age)
+//     this.experience = experience
+//   }
+//   writeCode() {console.log('Пишу код')}
 
-  sleep() {
-    console.log('Не могу спать, пока рядом враги')
-    this.writeCode()
+//   sleep() {
+//     console.log('Не могу спать, пока рядом враги')
+//     this.writeCode()
 
 
-  }
+//   }
 
-}
+// }
 
-const exampleDeveloper = new Developer('Макс', 25, 5)
-console.log(exampleDeveloper)
+// const exampleDeveloper = new Developer('Макс', 25, 5)
+// console.log(exampleDeveloper)
 
 
 /*__________________________________________________________ */
