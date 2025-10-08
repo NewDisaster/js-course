@@ -1,0 +1,12 @@
+{
+    "name": "Макс",
+    "age": 27,
+    "city": "Дзержинск",
+    "address": {
+        "street": "Адрес",
+        "zipcode": 123456 
+    },
+    "todos": ["sleep", "eat", "work", "train", "learn"],
+    "hasCat": true,
+    "yacht": null
+}
