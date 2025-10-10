@@ -131,32 +131,33 @@ catch() обрабатывает rejected состояние
 
 /*__________________________________________________________ */
 
-const promise = new Promise((fulfil, reject) => {
-  console.log('Начало, состояние pending...')
+// const promise = new Promise((fulfil, reject) => {
+//   console.log('Начало, состояние pending...')
 
-  setTimeout(() => {
-    if (Math.random() > 0.5) {
-      fulfil('Ура, состояние fulfilled =)')
+//   setTimeout(() => {
+//     if (Math.random() > 0.5) {
+//       fulfil('Ура, состояние fulfilled =)')
 
-    } else{
-      reject('Увы, состояние rejected =(')
-    }
-  }, 3000)
-})
+//     } else{
+//       reject('Увы, состояние rejected =(')
+//     }
+//   }, 3000)
+// })
 
-promise
-.then((successData) => {
-  console.log('Успех! Полученные данные:', successData)
-},
-(errorData) => {
-  console.log('Ошибка. Получены данные:', errorData)
-}
-)
-.finally(() => {
-  console.log('Код, выполняющийся в самом конце, независимо от результата')
-})
+// promise
+// .then((successData) => {
+//   console.log('Успех! Полученные данные:', successData)
+// },
+// (errorData) => {
+//   console.log('Ошибка. Получены данные:', errorData)
+// }
+// )
+// .finally(() => {
+//   console.log('Код, выполняющийся в самом конце, независимо от результата')
+// })
 
 /*__________________________________________________________ */
+
 
 
 
